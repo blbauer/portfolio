@@ -1,0 +1,55 @@
+<html>
+<body>
+<h1>Get Hints Example</h1>
+<p>Start typing a name in the input field below:</p>
+<p>First name: <input type="text" id=txtName onkeyup="showHint()"></p>
+<p>Suggestions: <span id="txtHint"></span></p>
+<script>
+function showHint() {
+    
+    /* On each keystroke, get the current value of the input text box */
+    var str = document.getElementById("txtName").value;
+    
+    /* if the textbox is empty, then the hint is empty */
+
+    if (str.length == 0) { 
+        document.getElementById("txtHint").innerHTML = "";
+        return;
+
+    } else {
+
+        /* URL for AJAX Call */
+        var myURL = "http://brucebauer.info/assets/ITEC3650/gethint.php";
+        
+        /* AJAX Method (usually GET) */
+        var myMethod = "GET";
+        
+        /* Object containing the data sent to the AJAX page.
+        The "gethint.php" page requires the "str" value 
+        The properites of the object must EXACTLY match the requirement of the AJAX page*/
+
+        var myData = {};
+        myData.Name = str;
+
+        /* Make sure the document is ready */
+        $(document).ready(function() { 
+            
+            /* Perfomr AJAX call */
+            
+            $.ajax({
+              method: myMethod,
+              data: myData,
+              url: myURL
+            })
+        
+            /* AJAX complete - your code goes here - display the returned message */
+              .done(function( msg ) {
+                document.getElementById("txtHint").innerHTML = msg;
+            });
+        });
+    }
+}
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+</body>
+</html>

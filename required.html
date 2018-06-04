@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+<head>
+    <title>Makes "field" always required.</title> 
+    <style>
+    .formlabel {
+        display: inline-block;
+        width: 100px;
+        text-align: right;
+        padding: 5px;
+    }
+    .error {
+        color: red;
+        padding-left: 5px;
+    }
+    </style>
+</head>
+<body>
+<form id="myform">
+<h2>Employee Information</h2>
+<label for="FirstName" class="formlabel">First Name: </label>
+<input type="text" id="FirstName" name="FirstName">
+<br/>
+    
+<label for="LastName"class="formlabel">Last Name: </label>
+<input type="text" id="LastName" name="LastName">
+<br/>
+    
+<label for="Dependents" class="formlabel" id="DependentsLabel">Dependents: </label>
+<input class="forminput" id="Dependents" name="Dependents" type="text" maxlength="2" size="2">
+<br/>
+
+<label for="Location" class="formlabel" id="LocationLabel">Location: </label>
+<select id="Location" name="Location">
+    <option value="">Select a Location...</option>
+    <option value="Little Rock">Little Rock</option>
+    <option value="North Little Rock">North Little Rock</option>
+    <option value="Conway">Conway</option>
+    <option value="Benton">Benton</option>
+</select>
+<br/>
+
+<!--Note how we have to have the name field set to the same value so that only one Gender can be selected -->
+<!--<label for="Gender" class="formlabel" id="GenderLabel">Gender: </label>-->
+<label for="Gender" class="formlabel" id="GenderLabel">Gender:</label>
+<label for="GenderMale">
+    <input type="radio" id="GenderMale" name="Gender" value="male"/> Male
+</label>
+<label for="GenderFemale">
+    <input type="radio" id="GenderFemale" name="Gender" value="female"/> Female
+</label>
+<label for="GenderOther">
+    <input type="radio" id="GenderOther" name="Gender" value="other"/> Other
+</label>
+<!-- The following label places the error message -->
+<label for="Gender" class="error"></label>
+<br/>
+
+<label for="Medical" class="formlabel" id="MedicalLabel">Insurance:</label>
+<input type="checkbox" id="Medical" name="Medical" value="Med">Medical Insurance
+<!-- The following label places the error message -->
+<label for="Medical" class="error"></label>
+<br/>
+<label for="Dental" class="formlabel" id="dentalLabel">&nbsp;</label>
+<input type="checkbox" id="Dental" name="Dental" value="Den">Dental Insurance
+<br/>
+<label for="Vision" class="formlabel" id="visionLabel">&nbsp;</label>
+<input type="checkbox" id="Vision" name="Dental" value="Den">Vision Insurance<br>
+<br/>
+
+<br/>
+<input type="submit" value="Validate" onclick="dosomething()">
+<br/><br/>
+
+<div id="FormValidationSummary" class="error"></div>
+</form>
+<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+<script>
+// just for the demos, avoids form submit
+//jQuery.validator.setDefaults({
+//  debug: true,
+//  success: "valid"
+//});
+$( "#myform" ).validate({
+  debug: true,
+  rules: {
+    FirstName: {
+      required: true,
+      minlength: 3        
+    },
+    LastName: {
+      required: true,
+      minlength: 3
+    },
+    Dependents: {
+      required: true,
+      min: 0,
+      max: 10
+    },
+    Location: {
+      required: true
+    },
+    Gender: {
+      required: true
+    },
+    Medical: {
+      required: true
+    }
+  },
+    messages: {
+        FirstName: {
+            required: "First Name is Required",
+            minlength: "First Name must be 3 or more characters long"
+        },
+        LastName: {
+            required: "Last Name is Required",
+            minlength: "Last Name must be 3 or more characters long"
+        }
+    }
+});
+function dosomething() {
+    var form = $( "#myform" );
+    form.validate();
+    if (form.valid()) {
+        document.getElementById("FormValidationSummary").innerHTML = "Form is Valid";
+    }
+    else {
+        document.getElementById("FormValidationSummary").innerHTML = "Form is not Valid";
+    }
+}
+</script>
+</body>
+</html>
