@@ -17,11 +17,10 @@
 
         <div class="tab">
             <button class="tablinks" onclick="openTab(event, 'Home')" id="defaultOpen">Profile</button>
+            <button class="tablinks" onclick="openTab(event, 'Resume')">Resume</button>
             <button class="tablinks" onclick="openTab(event, 'Skills')">Skills</button>
-            <button class="tablinks" onclick="openTab(event, 'Experience')">Experience</button>
             <button class="tablinks" onclick="openTab(event, 'Education')">Education</button>
             <button class="tablinks" onclick="openTab(event, 'Accomplishments')">Accomplishments</button>
-            <button class="tablinks" onclick="openTab(event, 'Resume')">Resume</button>
             <button class="tablinks" onclick="openRedirect('workexamples.html')">Work Examples</button>
             <button class="tablinks" onclick="openTab(event, 'CoverLetter')">Cover Letter</button>
             <button class="tablinks" onclick="openTab(event, 'Contact')">Contact</button>
@@ -56,8 +55,149 @@
             </ul>
         </div>
 
-        <!-- Begin Experience Section -->
-        <div id="Experience" class="tabcontent">
+        <div id="Education" class="tabcontent">
+          <h2>Education</h2>
+       <!-- Begin Education Section -->
+                <h3>Master of Science in Computer Science</h3>
+                <div itemscope itemtype="http://schema.org/EducationalOrganization">
+                    <span itemprop="name">Oklahoma State University</span> - <a itemprop="url" href="http://www.okstate.edu/" title="Okahoma State University">www.okstate.edu</a><br>
+                    <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                        <span itemprop="streetAddress">202 Whitehurst</span>,
+                        <span itemprop="addressLocality">Stillwater</span>, 
+                        <span itemprop="addressRegion">OK</span>
+                        <span itemprop="postalCode">74078</span>  
+                        <span itemprop="addressCountry">U.S.A.</span>
+                    </span>
+
+                </div>
+                <br>
+
+                <div itemscope itemtype="http://schema.org/EducationalOrganization">
+                    <h3>Bachelor of Arts in Physics</h3>
+                    <span itemprop="name">Hendrix College</span> - <a itemprop="url" href="http://www.hendrix.edu/" title="Hendrix College">www.hendrix.edu</a><br>
+                    <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+                        <span itemprop="streetAddress">1600 Washington Ave</span>,
+                        <span itemprop="addressLocality">Conway</span>, 
+                        <span itemprop="addressRegion">AR</span> 
+                        <span itemprop="postalCode">72032</span> 
+                        <span itemprop="addressCountry">U.S.A.</span>
+                    </span>
+                </div>
+            <br>
+    <!-- End Education Section -->
+          </div>
+
+        <div id="Accomplishments" class="tabcontent">
+            <h2>Accomplishments</h2>
+            <h3>Arkansas Dept of Higher Education Course Transfer System</h3>
+            <p>In 2006, the Arkansas Legislature passed a law requiring that equivalent college courses are guaranteed to transfer to any state college in Arkansas.  The Academic Affairs division of the Arkansas Department of Higher Education (ADHE) was tasked with developing academic standards for over 100 courses and reviewing the syllabi of these courses at 32 colleges in Arkansas.  As the review process progressed, it became apparent that amount of paper-based data was rapidly overwhelming the staff.  As the newest member of the ADHE IT staff, it was my job to quickly sort out the academic review processes and develop a management system to facilitate capturing the academic review information.  A web based data entry system was quickly created, and the data was stored in a MS SQL database.  Reports were created to help ADHE staff identify missing course information.</p>
+
+            <p>The legislation also mandated that the information be available to student through the Internet. As the first application to be developed for the new ADHE web server, it was critical that security standards be implemented so that the web server could access the ADHE databases in real time without creating a security risk.  I researched and implemented the latest security tools available from Microsoft, including, web based password security schemes, database endpoints, secure remote web methods, and remote stored procedure invocation.  I also designed a simple web interface so that the general public could easily access the course transfer data.</p>
+
+            <p>The web site has facilitated the transfer of students between two and four year colleges, and has significantly improved the curriculum at state institutions.  This application can be seen at <a href="http://acts.adhe.edu">http://acts.adhe.edu</a></p>
+
+            <br><h3>Mack’s Prairie Wings Credit Card Point System</h3>
+
+            <p>Mack’s Prairie Wings is a nationally known waterfowl outfitter located in Stuttgart, Arkansas.  Mack’s uses Ecometry for their point of sale and inventory management system.  Mack’s has affinity Visa credit card with BankOne in which the customer can earn reward points with the purchase of merchandise.  These reward points can be redeemed and applied to future purchases from Mack’s. </p>
+
+            <p>My charge was to implement software that would communicate between the Ecometry system and BankOne, and to coordinate between all of the parties (Mack’s management, Ecometry, BankOne, and Edafio Technologies).  I determined that a standard project management methodology could be used with this project, and I quickly identified the major tasks, risks, and developed a budget and time line for the project.  Mack’s management was a little concerned about the project cost of the project planning, but I assured them it was necessary to ensure smooth development and implementation of the project.</p>
+
+            <p>My first task was to understand the capabilities of the Ecometry Point of Sale system and BankOne messaging features.  I had to translate the technical capabilities of these products into useful business operational scenarios, and then present them to Mack’s management.</p>
+
+            <p>Once the operating scenario was chosen, I worked with Mack’s business manager to develop training materials and documentation so that the sales personnel understood how to properly redeem the credit card point.  Since BankOne’s system was batch oriented and exchanged data only once a day, a step-by-step testing procedure was developed to ensure that all possible data scenarios were tested.  Finally, all network traffic had to be encrypted using PGP (pretty good privacy) software, which somewhat complicated real-time testing of the software.</p>
+
+            <p>Before coding began, all design documentation was completed and approved by all parties.  </p>
+
+            <p>The rest of the project was really unremarkable.  All went according to plan, and testing revealed only a few minor changes that needing to be addressed.  All of the parties involved appreciated that the planning really did result in a less expensive project.  The end result was that the project was completed on time and on budget.</p>
+
+            <p>Edafio Technologies determined that it would use this process as a standard development methodology for all of its projects.</p>
+
+
+
+            <br><h3>Financial Data Exchange and RateManager.com</h3>
+
+            <blockquote>“One of the most innovative products with which GEMICO has been associated”</blockquote>
+            --Mark Dameron, vice president of GEMICO<br><br>
+
+            <p>In 1998, a mortgage banker approached me with business operation problem.   Each day, he would have to spend several hours calculating the interest rate and points to be quoted on a specific type of loan.   He would have to gather the faxed rate sheets for the secondary market, determine the profitability of delivering the loan to various correspondent investors, and then communicate this with the load officers.  Often, market conditions would dictate a change in the rates at midday, and the process would have to be performed again.</p>
+
+            <p>In solving this problem, I saw a tremendous entrepreneurial opportunity.  If all mortgage bankers have similar problems in rate calculations, perhaps a vertical market package could be developed that marketed to the mortgage industry.</p>
+
+            <p>I co-founded Financial Data Exchange, Inc. in order to bring this product to the market.  I was responsible for startup, business plan development, and capital acquisition.  I also spearheaded the software design and development process of the software product, RateManager.com.</p>
+
+            <p>In 1999, Financial Data Exchange completed negotiations with General Electric Mortgage Insurance Corporation (GEMICO) to market RateManager.com through its 100+ national sales force.  Results of the pilot sales campaign in 2000 showed that home mortgage companies could increase profitability by over 20% through the use of RateManager.com.</p>
+
+            <p>Unfortunately, general market conditions in 2000 (an abrupt rise in prime interest rate) caused many mortgage companies to tighten their budget, and so RateManager.com was not the anticipated resounding success.  The product still has the interest of several investors and still considered a viable product.</p>
+
+            <br><h3>Alltel Long Distance</h3>
+
+            <p>In 1995, Alltel wanted to enter the long distance market.  They wanted to capitalize on AT&T’s “10 cents a minute” plan and use Alltel’s service bundle of wireline, wireless, paging, Internet to leverage its long distance markets.  To do so, Alltel was going to have to roll out a nationwide plan in 6 to 9 months.  Alltel realized that it was going to need an outside team to quickly implement this project.</p>
+
+            <p>As Chief Operating Officer and Chief Technologist for my company, Software Innovators, we entered into a unique business arrangement with Alltel Long Distance.   Software Innovators would staff a team to develop the necessary software.  After completion, the team would become employees of Alltel and continue to support and enhance the project.</p>
+
+            <p>My job was to staff the development team and to coordinate all the technical aspects of Alltel Long Distance.  I had to manage information flow between 11 public service commissions, 8 Alltel region divisions, Alltel Information Services, 6 long distance carriers such as Sprint, MCI, and Frontier. All of the long distance toll data was rated by Digital Communication Associates, and was returned to Alltel for creation of a bill.</p>
+
+            <p>I became the focal point for interpreting and relaying all technical information.  Each region and long distance carrier had its own unique standards of exchanging data.  I coordinated the technical specifications to ensure that data was correctly passed between entities.</p>
+
+            <p>The long-distance business has an amazingly high number of customers that have difficulty in switching their long distance service.  Part of my job was to notify entities of problems in switching a customer, along with developing procedures to monitor trouble ticket status.  I also created other quality initiatives, including a process to minimize the possibility of inadvertently “slamming” a customer.</p>
+
+            <p>In the first year of operation, Alltel Long Distance had nearly 100,000 customers with over $2,000,000 in revenue.  The value of this project to Software Innovators was nearly $500,000.</p>
+
+
+
+            <br><h3>National Financial Center - Year 2000 Analysis</h3>
+
+            <p>The National Financial Center (NFC) located in New Orleans is a Department of Agriculture (USDA) facility responsible for payroll, expense processing, and saving plans for over 1,000,000 government employees.  In 1997, it contracted with Software Innovators to analyze the scope of the Y2K issue and develop a plan for remediation of the software.</p>
+
+            <p>Software Innovators had developed several analysis products for Y2K.  With over 17,000,000 lines of code and remediation often costing over 50 cents per line, we had to come up with an innovative approach solving this problem.</p>
+
+            <p>I performed an extensive analysis of the mainframe software environment along with a selection of the code base.  I also interviewed all of the divisional managers and analyzed all of the Y2K efforts.</p>
+
+            <p>The results of our analysis and magnitude of the project indicated that manual remediation of the code was not a viable option.  Software Innovators partnered with Lockheed Martin and proposed the use of a state of the art language parser to review software code and make appropriate changes.  We also proposed staffing the project to monitor the process and to complete any manual tasks.   The approximate value of the project was $2,000,000.</p>
+
+            <p>This proposal was several million dollars less than original cost estimates.  The NFC decided to use our proposal and perform the code remediation using existing internal staff. Although we were not the eventual winners of the proposal, the NFC was successful in modifying its code for the year 2000. </p>
+
+
+            <br><h3>Beverly Enterprises Computer Based Training</h3>
+
+            <p>Beverly Enterprises is one of the top nursing home operators in the US, with over 375 facilities in the 25 states and 36,000 employees.  The company operates nursing homes and assisted living centers as well as providing rehabilitation therapy services.</p>
+
+            <p>Beverly approached Software Innovators about production and distribution training materials to employees.  After I performed an in-depth analysis of the education objectives of the company, it was determined that computer based training would an ideal way to deliver training materials to employees.  It would save time by eliminating the need for a supervisor to perform the training, and would give a consistent “Beverly” message throughout the company.</p>
+
+            <p>One of the hurdles to overcome was to communicate the results of the testing.  Beverly already had a mainframe computer to communicate business data to the remote facilities.  Using off the shelf software, I devised a method to seamlessly transmit the data to the corporate headquarters without interrupting business operations.</p>
+
+            <p>A pilot project was devised to deliver the “Create a Magical Moment” material to several Beverly facilities.  Software Innovators outsourced parts of the project to a professional actor and a graphics artist.  All graphics were original works. I developed the software that presented the audiovisual materials and recorded answers for later test scoring.</p>
+
+            <p>The pilot was deemed a success, and Software Innovators transferred the knowledge gained from the pilot to Beverly personnel.  The estimate cost of implementing this project was over $1,000,000.</p>
+
+            <br><h3>ALCOA Laboratory Information Management System</h3>
+
+            <p>The specialty chemicals division of Alcoa in Bauxite had an interesting problem.  Their laboratory was totally paper based, and with 5800 chemical tests per day it was becoming impossible to manage their laboratory processes.  To compound the problem, the laboratory results and chemical specifications had to be entered into a proprietary software system on Alcoa’s corporate computer at Pittsburgh.</p>
+
+            <p>Alcoa requested that Software Innovators develop a solution to this problem.  The project consisted of: analyzing Alcoa’s business needs, determining if an existing laboratory system could be used, and if not, come up with an estimate of what a custom laboratory system would cost.</p>
+
+            <p>Using standard laboratory operations methodology, I analyzed Alcoa’s laboratory needs and developed a detailed requirements document.  I analyzed the features of the top five commercial laboratory systems and scored them against the requirements document.  We discovered that none or the commercial laboratory systems would work in Alcoa’s unique environment.</p>
+
+            <p>My next task was to devise a custom laboratory system that would manage the laboratory samples and communicate with the Alcoa’s corporate computer.  The entire system was designed, including screens, reports, information flow, database layout, and mainframe communications.  The estimated project cost was $350,000.</p>
+
+            <p>With the plans developed and the technology issues solved, Alcoa elected to use the planning documents and develop the laboratory system internally.</p>
+
+            <br><h3>Solar Energy System - National Center for Toxicological Research</h3>
+
+            <p>The National Center for Toxicological Research (NCTR) is located on the perimeter of the Pine Bluff Arsenal.   It is home to many different types of research projects, including a solar array project funded by the Department of Energy.  The project consists of 200 solar heating panels mounted on a fixed framework.  Cool water was pumped into the collectors where they were warmed by the sun.  Depending on the heat of the water, the energy was either transferred to the hot water supply of the center, or used to supplement the forced air heating system.</p>
+
+            <p>I managed the development of the software system to operate the pumps, valves, flow meters, temperature gauges, and alarm modes of the system.  Using the engineering specifications, I designed a software system that would operate the solar array according to specifications and maximize the heat transferred by the system.  </p>
+
+            <p>One of the greatest challenges to this project was designing a test system so that all of the seasons of the year and operating modes could be simulated. Though outside the scope of the project, I persuaded the project manager build a simulator system that could mimic the dynamics of the solar array and temperature values.  This enabled me to safely simulate emergency and fault conditions that could not be safely duplicated with the solar array.</p>
+
+            <p>Using the solar array simulator, we discovered that many of the underlying engineering assumptions needed to be modified so that the efficiency of the system could be maximized.  Management determined that use of the simulator contributed greatly to an understanding of the operation principles of the solar energy system and was crucial to the success of the project.</p>
+
+        </div>        
+        
+        <!-- Begin Skills Section -->
+        <div id="Resume" class="tabcontent">
+            <h2>Resume</h2>
+            <p>You are welcome to download my resume in either <a href="assets/resources/BruceBauerResume.doc">Microsoft Word</a> or <a href="assets/resources/BruceBauerResume.pdf">PDF</a> format.</p>
             <h2>Experience</h2>
             <!-- Position #1 -->
             <div itemscope itemtype="http://schema.org/Organization">
@@ -289,152 +429,6 @@ Designed and implemented a public web-based system to assist students in the tra
                 <li>Developed a Y2K evaluation plan to analyze over 17,000,000 lines of source code for the (USDA).</li>
             </ul>
         </div>
-    </div>
-
-                <!-- End Experience Section -->
-    <div id="Education" class="tabcontent">
-      <h2>Education</h2>
-   <!-- Begin Education Section -->
-            <h3>Master of Science in Computer Science</h3>
-            <div itemscope itemtype="http://schema.org/EducationalOrganization">
-                <span itemprop="name">Oklahoma State University</span> - <a itemprop="url" href="http://www.okstate.edu/" title="Okahoma State University">www.okstate.edu</a><br>
-                <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-                    <span itemprop="streetAddress">202 Whitehurst</span>,
-                    <span itemprop="addressLocality">Stillwater</span>, 
-                    <span itemprop="addressRegion">OK</span>
-                    <span itemprop="postalCode">74078</span>  
-                    <span itemprop="addressCountry">U.S.A.</span>
-                </span>
-
-            </div>
-            <br>
-
-            <div itemscope itemtype="http://schema.org/EducationalOrganization">
-                <h3>Bachelor of Arts in Physics</h3>
-                <span itemprop="name">Hendrix College</span> - <a itemprop="url" href="http://www.hendrix.edu/" title="Hendrix College">www.hendrix.edu</a><br>
-                <span itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-                    <span itemprop="streetAddress">1600 Washington Ave</span>,
-                    <span itemprop="addressLocality">Conway</span>, 
-                    <span itemprop="addressRegion">AR</span> 
-                    <span itemprop="postalCode">72032</span> 
-                    <span itemprop="addressCountry">U.S.A.</span>
-                </span>
-            </div>
-        <br>
-<!-- End Education Section -->
-      </div>
-
-        <div id="Accomplishments" class="tabcontent">
-            <h2>Accomplishments</h2>
-            <h3>Arkansas Dept of Higher Education Course Transfer System</h3>
-            <p>In 2006, the Arkansas Legislature passed a law requiring that equivalent college courses are guaranteed to transfer to any state college in Arkansas.  The Academic Affairs division of the Arkansas Department of Higher Education (ADHE) was tasked with developing academic standards for over 100 courses and reviewing the syllabi of these courses at 32 colleges in Arkansas.  As the review process progressed, it became apparent that amount of paper-based data was rapidly overwhelming the staff.  As the newest member of the ADHE IT staff, it was my job to quickly sort out the academic review processes and develop a management system to facilitate capturing the academic review information.  A web based data entry system was quickly created, and the data was stored in a MS SQL database.  Reports were created to help ADHE staff identify missing course information.</p>
-
-            <p>The legislation also mandated that the information be available to student through the Internet. As the first application to be developed for the new ADHE web server, it was critical that security standards be implemented so that the web server could access the ADHE databases in real time without creating a security risk.  I researched and implemented the latest security tools available from Microsoft, including, web based password security schemes, database endpoints, secure remote web methods, and remote stored procedure invocation.  I also designed a simple web interface so that the general public could easily access the course transfer data.</p>
-
-            <p>The web site has facilitated the transfer of students between two and four year colleges, and has significantly improved the curriculum at state institutions.  This application can be seen at <a href="http://acts.adhe.edu">http://acts.adhe.edu</a></p>
-
-            <br><h3>Mack’s Prairie Wings Credit Card Point System</h3>
-
-            <p>Mack’s Prairie Wings is a nationally known waterfowl outfitter located in Stuttgart, Arkansas.  Mack’s uses Ecometry for their point of sale and inventory management system.  Mack’s has affinity Visa credit card with BankOne in which the customer can earn reward points with the purchase of merchandise.  These reward points can be redeemed and applied to future purchases from Mack’s. </p>
-
-            <p>My charge was to implement software that would communicate between the Ecometry system and BankOne, and to coordinate between all of the parties (Mack’s management, Ecometry, BankOne, and Edafio Technologies).  I determined that a standard project management methodology could be used with this project, and I quickly identified the major tasks, risks, and developed a budget and time line for the project.  Mack’s management was a little concerned about the project cost of the project planning, but I assured them it was necessary to ensure smooth development and implementation of the project.</p>
-
-            <p>My first task was to understand the capabilities of the Ecometry Point of Sale system and BankOne messaging features.  I had to translate the technical capabilities of these products into useful business operational scenarios, and then present them to Mack’s management.</p>
-
-            <p>Once the operating scenario was chosen, I worked with Mack’s business manager to develop training materials and documentation so that the sales personnel understood how to properly redeem the credit card point.  Since BankOne’s system was batch oriented and exchanged data only once a day, a step-by-step testing procedure was developed to ensure that all possible data scenarios were tested.  Finally, all network traffic had to be encrypted using PGP (pretty good privacy) software, which somewhat complicated real-time testing of the software.</p>
-
-            <p>Before coding began, all design documentation was completed and approved by all parties.  </p>
-
-            <p>The rest of the project was really unremarkable.  All went according to plan, and testing revealed only a few minor changes that needing to be addressed.  All of the parties involved appreciated that the planning really did result in a less expensive project.  The end result was that the project was completed on time and on budget.</p>
-
-            <p>Edafio Technologies determined that it would use this process as a standard development methodology for all of its projects.</p>
-
-
-
-            <br><h3>Financial Data Exchange and RateManager.com</h3>
-
-            <blockquote>“One of the most innovative products with which GEMICO has been associated”</blockquote>
-            --Mark Dameron, vice president of GEMICO<br><br>
-
-            <p>In 1998, a mortgage banker approached me with business operation problem.   Each day, he would have to spend several hours calculating the interest rate and points to be quoted on a specific type of loan.   He would have to gather the faxed rate sheets for the secondary market, determine the profitability of delivering the loan to various correspondent investors, and then communicate this with the load officers.  Often, market conditions would dictate a change in the rates at midday, and the process would have to be performed again.</p>
-
-            <p>In solving this problem, I saw a tremendous entrepreneurial opportunity.  If all mortgage bankers have similar problems in rate calculations, perhaps a vertical market package could be developed that marketed to the mortgage industry.</p>
-
-            <p>I co-founded Financial Data Exchange, Inc. in order to bring this product to the market.  I was responsible for startup, business plan development, and capital acquisition.  I also spearheaded the software design and development process of the software product, RateManager.com.</p>
-
-            <p>In 1999, Financial Data Exchange completed negotiations with General Electric Mortgage Insurance Corporation (GEMICO) to market RateManager.com through its 100+ national sales force.  Results of the pilot sales campaign in 2000 showed that home mortgage companies could increase profitability by over 20% through the use of RateManager.com.</p>
-
-            <p>Unfortunately, general market conditions in 2000 (an abrupt rise in prime interest rate) caused many mortgage companies to tighten their budget, and so RateManager.com was not the anticipated resounding success.  The product still has the interest of several investors and still considered a viable product.</p>
-
-            <br><h3>Alltel Long Distance</h3>
-
-            <p>In 1995, Alltel wanted to enter the long distance market.  They wanted to capitalize on AT&T’s “10 cents a minute” plan and use Alltel’s service bundle of wireline, wireless, paging, Internet to leverage its long distance markets.  To do so, Alltel was going to have to roll out a nationwide plan in 6 to 9 months.  Alltel realized that it was going to need an outside team to quickly implement this project.</p>
-
-            <p>As Chief Operating Officer and Chief Technologist for my company, Software Innovators, we entered into a unique business arrangement with Alltel Long Distance.   Software Innovators would staff a team to develop the necessary software.  After completion, the team would become employees of Alltel and continue to support and enhance the project.</p>
-
-            <p>My job was to staff the development team and to coordinate all the technical aspects of Alltel Long Distance.  I had to manage information flow between 11 public service commissions, 8 Alltel region divisions, Alltel Information Services, 6 long distance carriers such as Sprint, MCI, and Frontier. All of the long distance toll data was rated by Digital Communication Associates, and was returned to Alltel for creation of a bill.</p>
-
-            <p>I became the focal point for interpreting and relaying all technical information.  Each region and long distance carrier had its own unique standards of exchanging data.  I coordinated the technical specifications to ensure that data was correctly passed between entities.</p>
-
-            <p>The long-distance business has an amazingly high number of customers that have difficulty in switching their long distance service.  Part of my job was to notify entities of problems in switching a customer, along with developing procedures to monitor trouble ticket status.  I also created other quality initiatives, including a process to minimize the possibility of inadvertently “slamming” a customer.</p>
-
-            <p>In the first year of operation, Alltel Long Distance had nearly 100,000 customers with over $2,000,000 in revenue.  The value of this project to Software Innovators was nearly $500,000.</p>
-
-
-
-            <br><h3>National Financial Center - Year 2000 Analysis</h3>
-
-            <p>The National Financial Center (NFC) located in New Orleans is a Department of Agriculture (USDA) facility responsible for payroll, expense processing, and saving plans for over 1,000,000 government employees.  In 1997, it contracted with Software Innovators to analyze the scope of the Y2K issue and develop a plan for remediation of the software.</p>
-
-            <p>Software Innovators had developed several analysis products for Y2K.  With over 17,000,000 lines of code and remediation often costing over 50 cents per line, we had to come up with an innovative approach solving this problem.</p>
-
-            <p>I performed an extensive analysis of the mainframe software environment along with a selection of the code base.  I also interviewed all of the divisional managers and analyzed all of the Y2K efforts.</p>
-
-            <p>The results of our analysis and magnitude of the project indicated that manual remediation of the code was not a viable option.  Software Innovators partnered with Lockheed Martin and proposed the use of a state of the art language parser to review software code and make appropriate changes.  We also proposed staffing the project to monitor the process and to complete any manual tasks.   The approximate value of the project was $2,000,000.</p>
-
-            <p>This proposal was several million dollars less than original cost estimates.  The NFC decided to use our proposal and perform the code remediation using existing internal staff. Although we were not the eventual winners of the proposal, the NFC was successful in modifying its code for the year 2000. </p>
-
-
-            <br><h3>Beverly Enterprises Computer Based Training</h3>
-
-            <p>Beverly Enterprises is one of the top nursing home operators in the US, with over 375 facilities in the 25 states and 36,000 employees.  The company operates nursing homes and assisted living centers as well as providing rehabilitation therapy services.</p>
-
-            <p>Beverly approached Software Innovators about production and distribution training materials to employees.  After I performed an in-depth analysis of the education objectives of the company, it was determined that computer based training would an ideal way to deliver training materials to employees.  It would save time by eliminating the need for a supervisor to perform the training, and would give a consistent “Beverly” message throughout the company.</p>
-
-            <p>One of the hurdles to overcome was to communicate the results of the testing.  Beverly already had a mainframe computer to communicate business data to the remote facilities.  Using off the shelf software, I devised a method to seamlessly transmit the data to the corporate headquarters without interrupting business operations.</p>
-
-            <p>A pilot project was devised to deliver the “Create a Magical Moment” material to several Beverly facilities.  Software Innovators outsourced parts of the project to a professional actor and a graphics artist.  All graphics were original works. I developed the software that presented the audiovisual materials and recorded answers for later test scoring.</p>
-
-            <p>The pilot was deemed a success, and Software Innovators transferred the knowledge gained from the pilot to Beverly personnel.  The estimate cost of implementing this project was over $1,000,000.</p>
-
-            <br><h3>ALCOA Laboratory Information Management System</h3>
-
-            <p>The specialty chemicals division of Alcoa in Bauxite had an interesting problem.  Their laboratory was totally paper based, and with 5800 chemical tests per day it was becoming impossible to manage their laboratory processes.  To compound the problem, the laboratory results and chemical specifications had to be entered into a proprietary software system on Alcoa’s corporate computer at Pittsburgh.</p>
-
-            <p>Alcoa requested that Software Innovators develop a solution to this problem.  The project consisted of: analyzing Alcoa’s business needs, determining if an existing laboratory system could be used, and if not, come up with an estimate of what a custom laboratory system would cost.</p>
-
-            <p>Using standard laboratory operations methodology, I analyzed Alcoa’s laboratory needs and developed a detailed requirements document.  I analyzed the features of the top five commercial laboratory systems and scored them against the requirements document.  We discovered that none or the commercial laboratory systems would work in Alcoa’s unique environment.</p>
-
-            <p>My next task was to devise a custom laboratory system that would manage the laboratory samples and communicate with the Alcoa’s corporate computer.  The entire system was designed, including screens, reports, information flow, database layout, and mainframe communications.  The estimated project cost was $350,000.</p>
-
-            <p>With the plans developed and the technology issues solved, Alcoa elected to use the planning documents and develop the laboratory system internally.</p>
-
-            <br><h3>Solar Energy System - National Center for Toxicological Research</h3>
-
-            <p>The National Center for Toxicological Research (NCTR) is located on the perimeter of the Pine Bluff Arsenal.   It is home to many different types of research projects, including a solar array project funded by the Department of Energy.  The project consists of 200 solar heating panels mounted on a fixed framework.  Cool water was pumped into the collectors where they were warmed by the sun.  Depending on the heat of the water, the energy was either transferred to the hot water supply of the center, or used to supplement the forced air heating system.</p>
-
-            <p>I managed the development of the software system to operate the pumps, valves, flow meters, temperature gauges, and alarm modes of the system.  Using the engineering specifications, I designed a software system that would operate the solar array according to specifications and maximize the heat transferred by the system.  </p>
-
-            <p>One of the greatest challenges to this project was designing a test system so that all of the seasons of the year and operating modes could be simulated. Though outside the scope of the project, I persuaded the project manager build a simulator system that could mimic the dynamics of the solar array and temperature values.  This enabled me to safely simulate emergency and fault conditions that could not be safely duplicated with the solar array.</p>
-
-            <p>Using the solar array simulator, we discovered that many of the underlying engineering assumptions needed to be modified so that the efficiency of the system could be maximized.  Management determined that use of the simulator contributed greatly to an understanding of the operation principles of the solar energy system and was crucial to the success of the project.</p>
-
-        </div>        
-        
-        <!-- Begin Skills Section -->
-        <div id="Resume" class="tabcontent">
-            <h2>Resume</h2>
-            <p>You are welcome to download my resume in either <a href="assets/resources/BruceBauerResume.doc">Microsoft Word</a> or <a href="assets/resources/BruceBauerResume.pdf">PDF</a> format.</p>
         </div>
         
         <div id="CoverLetter" class="tabcontent">
