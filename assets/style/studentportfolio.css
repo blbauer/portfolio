@@ -15,7 +15,11 @@ body {
 
 p {
 	margin-bottom: 20px;
-	}
+}
+
+p.shift {
+    margin-left: 30px;
+}
 
 .listmargin  {
 	margin-bottom: 20px;
